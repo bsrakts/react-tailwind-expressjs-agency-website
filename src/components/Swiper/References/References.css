@@ -1,0 +1,67 @@
+.references{
+    @apply w-full bg-[#181818] py-24 px-8 md:px-48
+}
+
+.references-header{
+    @apply text-[#e5e7eb] text-5xl mb-8
+}
+
+
+.references-img img {
+    @apply object-cover rounded-2xl
+}
+
+
+.swiper-button-next-reference,.swiper-button-prev-reference {
+  @apply w-[50px] h-[50px] bg-[#e5e7eb] z-20 cursor-pointer flex justify-center items-center;
+      background-image: none;
+  }
+
+  .swiper-button-next-reference i,.swiper-button-prev-reference i {
+    @apply relative left-[50%] top-[50%] text-[#21272b];
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    transition: all .3s ease-in-out;
+  }
+  @keyframes arrowRight {
+    0% {
+      -webkit-transform: translate(0,-50%);
+      transform: translate(0,-50%);
+    }
+  
+    50% {
+      -webkit-transform: translate(-10px,-50%);
+      transform: translate(-10px,-50%);
+    }
+  
+    100% {
+      -webkit-transform: translate(0,-50%);
+      transform: translate(0,-50%);
+    }
+  }
+  
+  .swiper-button-next-reference:hover i,.swiper-button-prev-reference:hover i {
+    -webkit-animation: arrowRight 1s infinite;
+    animation: arrowRight 1s infinite;
+  }
+  
+  .swiper-button-next-reference {
+    @apply absolute bottom-0 right-0 mt-0 z-50;
+  }
+
+  @media (min-width:1200px) {
+    .swiper-button-next-reference {
+      background-color: #f2f3f3;
+    }
+  }
+  
+  .swiper-button-prev-reference {
+    @apply absolute bottom-auto left-0 mt-0 z-50;
+  }
+  
+  @media (min-width:1200px) {
+    .swiper-button-prev-reference {
+      @apply bottom-0 bg-[#f2f3f3];
+    }
+  }

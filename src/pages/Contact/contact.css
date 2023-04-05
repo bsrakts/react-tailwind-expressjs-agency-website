@@ -1,0 +1,60 @@
+.contact-infos {
+    @apply flex justify-center items-center w-full h-full
+}
+
+.contact-container {
+    background-position: 50%;
+    background-image: url('https://mdbootstrap.com/img/new/textures/full/284.jpg');
+    height: 400px;
+}
+
+.container-two {
+    margin-top: -200px;
+    background-image: linear-gradient(hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.1));
+    backdrop-filter: blur(30px);
+}
+
+[type='text']:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[multiple]:focus,
+[type='checkbox']:focus,
+[type='radio']:focus
+textarea:focus,
+select:focus {
+    --tw-ring-color: none !important;
+    --tw-ring-shadow:none !important;
+}
+
+[type='checkbox'] {
+    @apply text-orange-500 !important;
+}
+
+.contact-info-list {
+    @apply border-b text-[#18181c] py-8 px-20 my-6 mx-8 flex flex-col justify-center
+}
+
+.contact-info-list h1 {
+    @apply text-2xl font-semibold pb-4 text-orange-400
+}
+
+.contact-info-list p {
+    @apply text-xl font-medium
+}
+
+.social-icons {
+    @apply flex
+}
+
+.social-icons li {
+    @apply py-2 pr-8
+}

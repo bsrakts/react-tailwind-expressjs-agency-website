@@ -1,0 +1,124 @@
+.nav {
+    @apply sticky text-white;
+    z-index:300;
+}
+
+.navbar {
+    @apply fixed top-0 left-0 w-full flex justify-between items-center px-[3em] ;
+}
+
+.logo{
+    @apply decoration-0 text-white font-bold uppercase;
+}
+
+.menu-toggle{
+    @apply cursor-pointer;
+}
+
+.nav-overlay{
+    @apply fixed bg-[#18181c] top-[-100%] left-0 w-full h-[100vh] p-[4em];
+    transition: all 5s ease-in-out;
+    z-index:-200;
+}
+
+.hamBox{
+    @apply relative w-[44px] h-[44px] cursor-pointer rounded-[50%] p-[2.4em];
+    transition: all .3s ease-in-out;
+}
+
+.hamBox:hover{
+    @apply bg-[#2a2a2f]
+}
+
+.hamBoxOpen{
+    @apply bg-[2a2a2f]
+}
+
+.lineTop, .lineBottom{
+    @apply my-0 mx-auto absolute block w-[-24px] h-[2px] rounded-[-10px] bg-[rgba(17,17,17,0.5)] bg-orange-500 left-0 right-0 transition duration-1000;
+    transform: rotate(0deg);
+}
+/* bg-[rgba(17,17,17,0.5)] */
+
+.lineTop{
+    @apply top-[2.2em]
+}
+
+.lineBottom{
+    @apply bottom-[2.2em]
+}
+
+.lineTop.spin{
+    @apply top-[2.35em] bg-orange-500;
+    transform:rotate(135deg);
+}
+
+.lineBottom.spin {
+    @apply bottom-[2.35em] bg-orange-500;
+    transform: rotate(225deg);
+}
+
+ul.nav-links{
+  @apply absolute top-[50%] left-[50%] m-0 p-0 flex flex-col justify-center items-center;
+  transform: translate(-50%, -50%)
+}
+
+ul.nav-links li{
+   @apply relative hover:bg-black transition ease-out duration-1000 hover:w-[30em];
+   list-style:none;
+}
+
+ul.nav-links li a{
+    @apply decoration-0 text-white font-["Rosseta"] text-[6em] relative top-0;
+    transition: all 2s cubic-bezier(0.16,1,0.3,1);
+}
+
+ul.nav-links li a{
+    @apply decoration-0 text-white font-["Rosseta"] text-[6em] relative top-0 transition duration-1000;
+    transition: all 2s cubic-bezier(0.16,1,0.3,1);
+}
+
+.nav-item-wrapper::after{
+    @apply absolute top-[120px] left-[-10%] w-[120%] h-full bg-[#18181c] my-0 mx-auto
+}
+
+.nav-footer {
+    @apply absolute w-full bottom-12 left-0 p-[2em] flex justify-between tracking-wide;
+    letter-spacing:0.4rem;
+}
+
+.nav-social-media ul{
+    @apply flex
+}
+
+.nav-social-media ul li{
+    list-style:none;
+}
+
+.nav-social-media ul li a{
+    @apply relative bottom-[-20px] decoration-0 font-serif text-white uppercase pl-[2em] opacity-0;
+    transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.location{
+    @apply relative bottom-[-20px] opacity-0 font-serif uppercase;
+    transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media(max-width:900px){
+    ul.nav-links li a{
+        @apply text-[5em]
+    }
+
+    .location{
+       display:none;
+    }
+
+    .nav-footer{
+        @apply justify-around
+    }
+
+    .nav-social-media ul li a{
+        @apply py-[0em] px-[1em]
+    }
+}

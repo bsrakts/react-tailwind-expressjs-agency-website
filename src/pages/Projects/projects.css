@@ -1,0 +1,15 @@
+.references-content{
+   @apply px-4 md:px-24 my-8
+}
+
+.references-img-area{
+    @apply flex;
+}
+
+.project-name{
+    @apply w-[93%] font-serif font-semibold flex justify-center bg-slate-300 py-4 px-4
+}
+
+.projects-page-img {
+    @apply h-auto object-contain w-full pb-0 pr-4 hover:grayscale transition-all duration-500 hover:drop-shadow-2xl
+}

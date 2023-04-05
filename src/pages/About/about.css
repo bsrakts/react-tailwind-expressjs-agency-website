@@ -1,0 +1,59 @@
+.about-page-step-one{
+    @apply bg-[#18181c] text-[#f1f1f1];
+}
+
+.about-page-content{
+    @apply min-h-screen w-full h-full pt-4;
+}
+
+.about-page-title{
+    @apply flex justify-center font-semibold text-4xl py-8
+}
+
+.about-page-main-text{
+    @apply flex justify-center font-normal text-xl pb-24 w-full
+}
+
+.company-info{
+    @apply w-[80%] justify-center
+}
+.youtube{
+    @apply rounded-2xl shadow-md shadow-yellow-400
+}
+
+.about-page-step-two{
+    @apply bg-[rgb(235,230,220)] text-[#161616]
+}
+
+.info-area{
+    @apply grid grid-cols-2 gap-10 mb-8
+}
+
+.info-text{
+    @apply text-justify col-span-1 text-2xl font-bold flex justify-center h-full
+}
+
+.info-animation{
+    @apply col-span-1 bg-transparent
+}
+
+.animation{
+    @apply w-full h-[400px]
+}
+
+.about-page-step-three{
+    @apply bg-[#18181c] text-[#f1f1f1]
+}
+
+.about-titles{
+    @apply my-4
+}
+
+.titles-header{
+    @apply text-yellow-400 font-bold leading-3 text-4xl py-8 font-sans;
+    letter-spacing:0.2rem;
+}
+
+.titles-paragraph{
+    @apply text-xl text-[rgb(241,236,225)] drop-shadow font-sans leading-9
+}

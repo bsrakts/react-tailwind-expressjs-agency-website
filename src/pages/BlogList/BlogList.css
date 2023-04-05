@@ -1,0 +1,7 @@
+.blog-list-content{
+    @apply mx-auto
+}
+
+.blog-container-title{
+    @apply flex justify-center w-full text-5xl font-bold mt-8
+}

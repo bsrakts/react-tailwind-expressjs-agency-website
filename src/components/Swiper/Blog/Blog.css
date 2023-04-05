@@ -1,0 +1,56 @@
+.blog{
+    @apply bg-transparent pt-14 lg:px-28 px-10 pb-10
+}
+
+.blog-header{
+    @apply text-center text-[#18181c] text-5xl font-bold mb-16
+}
+
+.blog-content{
+    @apply grid lg:grid-cols-2 grid-cols-1 lg:gap-4
+}
+
+.first-blog{
+    @apply lg:pt-0 xl:pt-0
+}
+
+.first-blog-img{
+    @apply overflow-hidden w-4/5 rounded-2xl
+}
+
+.first-blog-tag{
+    @apply text-[#18181c] pt-4 pb-7
+}
+
+.first-blog-tag span{
+    @apply px-6 py-2 bg-orange-400 rounded-full font-thin text-white
+}
+
+.first-blog-title{
+    @apply text-[#18181c] font-semibold text-2xl
+}
+
+.first-blog-text{
+    @apply pt-4 text-[#696984] w-4/5 mb-4
+}
+
+.read-more{
+    @apply pb-1 text-[#272727] font-semibold md:mb-4 mb-4 border-b border-orange-500
+}
+
+.latest-blog{
+    @apply lg:flex md:flex-col md:items-center xl:flex-row
+}
+
+.latest-blog-content{
+    @apply lg:pl-5 flex-row justify-center
+}
+
+.latest-blog-title{
+   @apply text-[#16161c] font-semibold text-xl
+}
+
+.latest-blog-text{
+    @apply text-[#696984] pt-3
+}
+

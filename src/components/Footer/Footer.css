@@ -1,0 +1,125 @@
+.footer {
+    @apply bg-[#181818] lg:px-28 pt-14 px-10 pb-10
+}
+
+.footer-container{
+    @apply grid grid-cols-1 lg:grid-cols-2 lg:gap-2 pb-8
+}
+
+.footer-title{
+    @apply text-white font-semibold lg:text-2xl
+}
+
+.footer-info {
+    @apply text-[#7A7893] xl:w-[559px] pt-4
+}
+
+.contact-area{
+    @apply grid lg:grid-cols-1 xl:grid-cols-2 grid-cols-1 md:grid-cols-1 pt-9
+}
+
+.phone{
+    @apply flex gap-2
+}
+
+.phone-text{
+    @apply text-[#7A7893] text-sm
+}
+
+.phone-call{
+    @apply text-white
+}
+
+.email{
+    @apply flex gap-2 text-white md:pt-4 pt-4 xl:pt-0
+}
+
+.email-text{
+    @apply text-[#7A7893] text-sm
+}
+
+.email-send{
+    @apply text-white
+}
+
+.contact-us{
+    @apply text-white font-semibold lg:text-xl md:pt-4 pt-4
+}
+
+.contact-us-text{
+    @apply text-[#7A7893] xl:w-[555px] pt-4 pb-5
+}
+
+.contact-us-input{
+    @apply rounded-full px-4 py-3 bg-[#ecdfd0] w-[70%]
+}
+
+.contact-us-button{
+    @apply text-white md:px-7 md:py-[0.6rem] pl-3 py-3 text-xs md:text-base rounded-full bg-[#e06d0f] absolute right-32 hover:text-white c-btn tracking-wider overflow-hidden
+}
+
+.submit-button{
+    @apply absolute inset-0 flex justify-center items-center
+}
+
+.social-media-area{
+    @apply flex justify-start pt-5 gap-4 socials
+}
+
+.social-media{
+    @apply relative overflow-hidden block footer-div cursor-pointer
+}
+
+.fb-icon{
+    @apply text-white bg-[#1c20f7] rounded-full leading-4 p-2 h-8 w-8
+}
+
+.youtube-icon{
+    @apply  text-white bg-[#c63232] rounded-full leading-4 p-2 h-8 w-8
+}
+
+.whatsapp-icon{
+    @apply text-white bg-[#307f63] rounded-full leading-4 p-2 h-8 w-8
+}
+
+.lower-footer{
+    @apply grid lg:grid-cols-2 grid-cols-1 pt-8 md:grid-cols-1 border-t border-orange-500
+}
+
+.lower-container{
+    @apply md:flex justify-between text-[#eb7835] text-xs md:text-base flex-col lg:flex-row 
+}
+
+.license{
+    @apply text-slate-400 lg:justify-end justify-start pt-4 flex md:justify-start md:pt-4 text-xs md:text-base lg:pt-0
+}
+
+.c-btn span:first-child {
+    transform: translateX(-101%);
+    transition: transform 0.3s ease-in;
+  }
+  .c-btn:hover span {
+    transform: translateX(0);
+  }
+  .socials .footer-div span:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+  }
+  .socials span {
+    transition: transform 0.2s ease-out;
+  }
+  
+  .socials .footer-div:hover span:first-child {
+    transform: translateY(100%);
+  }
+  
+  .socials .footer-div:hover span:last-child {
+    transform: none;
+  }
