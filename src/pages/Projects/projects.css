@@ -1,9 +1,14 @@
 .references-content{
-   @apply px-4 md:px-24 my-8
+   @apply px-4 md:px-24 my-10
 }
 
 .references-img-area{
     @apply flex;
+}
+
+.references-title{
+    @apply mb-12 text-5xl font-semibold text-yellow-400 py-4 border-b border-black w-full;
+    font-family:var(--font-extreme)
 }
 
 .project-name{
@@ -11,5 +16,10 @@
 }
 
 .projects-page-img {
-    @apply h-auto object-contain w-full pb-0 pr-4 hover:grayscale transition-all duration-500 hover:drop-shadow-2xl
+    @apply h-auto object-cover w-full pb-0 hover:grayscale transition-all duration-1000 ease-in-out;
+    box-shadow: rgba(217, 244, 11, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.projects-page-img img{
+    @apply object-cover max-h-[10rem] max-w-[10rem]
 }

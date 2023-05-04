@@ -1,5 +1,5 @@
 .entrance{
-    @apply flex flex-col justify-center items-center w-full max-h-screen;
+    @apply flex flex-col relative justify-center items-center overflow-hidden max-h-screen;
 }
 
 .entrance-content{
@@ -12,51 +12,44 @@
 
 
 .mainPage-content{
-    @apply absolute z-50 flex flex-col justify-end items-center max-h-screen w-[90%];
+    @apply absolute z-50 flex flex-col justify-end items-center max-h-screen max-w-[1280px];
 }
 
-/* .mainPage-bigHeader{
-    @apply  
-} */
+.mainPage-bigHeader{
+    @apply  max-w-[1280px]
+} 
 
 .mainPage-bigHeader a{
-    @apply text-yellow-400 font-extrabold text-[2rem] md:text-[4.5rem] lg:text-[7rem];
+    @apply text-[#ece511] flex w-full font-black text-[2rem] md:text-[4.5rem] lg:text-[14rem];
     letter-spacing:0.4rem;
+    font-family: var(--font-normal);
 }
 
 .mainPage-paragraph{
-    @apply font-normal text-[#e9e2da] text-2xl leading-8 w-2/3 md:ml-48;
-    font-family: 'Playfair Display', serif;
+    @apply text-[#e9e2da] text-2xl leading-8 w-3/4 md:ml-52 text-justify;
+    font-family:  var(--font-extreme);
+    font-size: clamp(22px, 2.2vw, 38px);
 }
 
-.contact-area{
-    @apply my-6 flex flex-row justify-center items-center;
-}
-
-.contact-area input{
-    @apply bg-white mx-4 !important ;
-    box-shadow:0px 0px 6px 2px rgb(236, 118, 7);
-}
-.contact-area input::placeholder{
-    @apply text-black font-semibold;
-    letter-spacing:1px;
-}
-
-.contact-area button{
-    @apply bg-[#da761a] text-white border-0;
-    
-}
-
-.contact-area button > a{
-    @apply text-[#f7dcd5] font-semibold;
-    letter-spacing:1px;
+.proje-button{
+    @apply w-full flex justify-end
 }
 
 .video-background {
+    max-height: 100vh;
+    max-width:100%;
+    height:100vh;
+    overflow: hidden;
+}
+
+.entrance-video{
+    filter: opacity(100%);
     position: absolute;
-    top: -100px;
+    top: -10vh;
     left: 0;
     width: 100%;
-    z-index: -1;
-  }
+    max-height:80vh;
+    object-fit: cover;
+}
+
  

@@ -23,8 +23,7 @@ export const ProjectsPage = () => {
             <li key={projectData.id} className="reference-square col-span-1">
             <Link to={`/projects/${projectData.id}`}>
                <a className="projects-page-img">
-                  <img className="projects-page-img" src={projectsİmg}></img>
-                  <span className='project-name'>{projectsName}</span>
+                  <img className="projects-page-img" src={projectsİmg}/>
                </a>
                </Link>
             </li>
@@ -37,12 +36,12 @@ export const ProjectsPage = () => {
          <div className="container mx-auto min-h-screen">
             <div className="grid grid-cols-1">
                <div className="references-content">
-                  <div className="references-title mb-12 text-4xl font-semibold text-gray-900 uppercase w-full">
+                  <div className="references-title">
                      <h1 className="flex justify-center">
-                        Referanslarımız
+                        Kimlerle Çalıştık ? 
                      </h1>
                   </div>
-                  <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+                  <ul className="img-list-reference grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
                      {projectData}
                   </ul>
                </div>

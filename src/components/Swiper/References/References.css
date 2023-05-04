@@ -1,19 +1,49 @@
 .references{
-    @apply w-full bg-[#181818] py-24 px-8 md:px-48
+    @apply w-full bg-white pt-8 pb-16
+}
+
+.references-content-mp{
+  @apply max-w-[1180px] m-auto
 }
 
 .references-header{
-    @apply text-[#e5e7eb] text-5xl mb-8
+    @apply text-[#181818] text-5xl mb-8 w-96 pb-4 border-b-2 border-b-yellow-300
 }
 
+.references-bottom{
+  @apply flex w-full
+}
+
+.references-content-m{
+  @apply w-full
+}
+
+.prev-next-button{
+  @apply w-[5%]  flex-row my-auto
+}
+
+
+.references-swiper{
+  height:33vh;
+}
+
+.references-group{
+  @apply flex w-full h-full py-4
+}
+
+.references-img{
+  @apply flex w-full h-full shadow-stone-300 hover:shadow-transparent rounded-sm shadow-md mr-4 border-4 border-white hover:border-4 hover:border-yellow-300 hover:transition-all hover:duration-500 hover:ease-in-out
+  hover:cursor-pointer hover:scale-105
+}
 
 .references-img img {
-    @apply object-cover rounded-2xl
+    @apply object-cover
 }
+
 
 
 .swiper-button-next-reference,.swiper-button-prev-reference {
-  @apply w-[50px] h-[50px] bg-[#e5e7eb] z-20 cursor-pointer flex justify-center items-center;
+  @apply w-[60px] h-[60px] border border-[#181818] hover:text-yellow-300 hover:bg-[#181818] hover:shadow-lg shadow-zinc-800 rounded-full z-20 m-4 text-2xl cursor-pointer flex justify-center items-center;
       background-image: none;
   }
 
@@ -44,24 +74,4 @@
   .swiper-button-next-reference:hover i,.swiper-button-prev-reference:hover i {
     -webkit-animation: arrowRight 1s infinite;
     animation: arrowRight 1s infinite;
-  }
-  
-  .swiper-button-next-reference {
-    @apply absolute bottom-0 right-0 mt-0 z-50;
-  }
-
-  @media (min-width:1200px) {
-    .swiper-button-next-reference {
-      background-color: #f2f3f3;
-    }
-  }
-  
-  .swiper-button-prev-reference {
-    @apply absolute bottom-auto left-0 mt-0 z-50;
-  }
-  
-  @media (min-width:1200px) {
-    .swiper-button-prev-reference {
-      @apply bottom-0 bg-[#f2f3f3];
-    }
   }

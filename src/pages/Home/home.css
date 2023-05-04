@@ -33,11 +33,11 @@
     }
 } */
 
-.swiper1-content{
+.swiper1-content {
     @apply relative h-full bg-[#18181c]
 }
 
-.wave-group > .wave {
+.wave-group>.wave {
     @apply bg-gray-900;
     border-radius: 1000% 1000% 0 0;
     position: fixed;
@@ -47,7 +47,7 @@
     transform: translate3d(0, 0, 0);
     opacity: 0.2;
     bottom: 1em;
-    border-top:2px solid orange;
+    border-top: 2px solid orange;
     left: 0;
     z-index: -1;
 }
@@ -87,7 +87,7 @@
 }
 
 
-.swiper2-content{
+.swiper2-content {
     @apply bg-[#e9e2da] text-orange-500 min-h-screen;
     animation: gradient 15s ease infinite;
     background-size: 400% 400%;
@@ -101,27 +101,29 @@
     0% {
         background-position: 0% 0%;
     }
+
     50% {
         background-position: 100% 100%;
     }
+
     100% {
         background-position: 0% 0%;
     }
 }
 
-.swiper3-content{
-    background-image:url(../../assets/uploads/Background/3.svg);
-    object-fit:cover;
+.swiper3-content {
+    background-image: url(../../assets/uploads/Background/3.svg);
+    object-fit: cover;
 }
 
-.swiper4-content{
-    background-image:url(../../assets/uploads/Background/4.svg);
-    object-fit:cover;
+.swiper4-content {
+    background-image: url(../../assets/uploads/Background/4.svg);
+    object-fit: cover;
 }
 
-.swiper-pagination-bullet{
-    width:0.3rem !important;
-    height:2rem !important;
-    border-radius:0 !important;
-    background-color:#2e2e2e !important;
+.swiper-pagination-bullet {
+    width: 0.3rem !important;
+    height: 2rem !important;
+    border-radius: 0 !important;
+    background-color: #2e2e2e !important;
 }

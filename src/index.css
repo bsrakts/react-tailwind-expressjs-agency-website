@@ -2,10 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700,800;1&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@layer utilities{
+  .bg-m-black{
+  background-color: #181818;
+  }
+
+  .bg-m-white{
+  background-color: #e5e5e5;
+  }
+
+  .text-m-black{
+  color: #181818;
+  }
+
+  .text-m-white{
+  color: #e5e5e5;
+  }
+}
 
 :root{
-  --font-normal: 'Overpass' ,sans-serif;
+  --font-normal: 'Poppins' ,sans-serif;
   --font-extreme: 'Playfair Display', serif;
 }
 

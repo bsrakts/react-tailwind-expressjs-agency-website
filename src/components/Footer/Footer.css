@@ -1,5 +1,5 @@
 .footer {
-    @apply bg-[#181818] lg:px-28 pt-14 px-10 pb-10
+    @apply bg-[#18181c] lg:px-28 pt-14 px-10 pb-10
 }
 
 .footer-container{
@@ -7,11 +7,14 @@
 }
 
 .footer-title{
-    @apply text-white font-semibold lg:text-2xl
+    @apply font-bold lg:text-5xl text-yellow-400 tracking-wider;
+    -webkit-text-stroke: 1px black;
+   text-shadow: 0.5px 0.5px 0px rgba(255, 255, 255, 1); 
+   font-family: var(--font-extreme);
 }
 
 .footer-info {
-    @apply text-[#7A7893] xl:w-[559px] pt-4
+    @apply text-slate-100 xl:w-[559px] pt-4
 }
 
 .contact-area{
@@ -22,48 +25,37 @@
     @apply flex gap-2
 }
 
-.phone-text{
-    @apply text-[#7A7893] text-sm
+.phone-text,
+.email-text{
+    @apply text-green-600 text-sm
 }
 
 .phone-call{
-    @apply text-white
+    @apply text-slate-200
 }
 
 .email{
-    @apply flex gap-2 text-white md:pt-4 pt-4 xl:pt-0
-}
-
-.email-text{
-    @apply text-[#7A7893] text-sm
+    @apply flex gap-2 text-slate-200 md:pt-4 pt-4 xl:pt-0
 }
 
 .email-send{
-    @apply text-white
+    @apply text-slate-200
 }
 
 .contact-us{
-    @apply text-white font-semibold lg:text-xl md:pt-4 pt-4
+    @apply text-blue-400 font-semibold lg:text-xl md:pt-4 pt-4
 }
 
 .contact-us-text{
-    @apply text-[#7A7893] xl:w-[555px] pt-4 pb-5
+    @apply text-slate-200 xl:w-[555px] pt-4 pb-5
 }
 
-.contact-us-input{
-    @apply rounded-full px-4 py-3 bg-[#ecdfd0] w-[70%]
-}
-
-.contact-us-button{
-    @apply text-white md:px-7 md:py-[0.6rem] pl-3 py-3 text-xs md:text-base rounded-full bg-[#e06d0f] absolute right-32 hover:text-white c-btn tracking-wider overflow-hidden
-}
-
-.submit-button{
-    @apply absolute inset-0 flex justify-center items-center
+.footer-contact-button{
+    @apply flex 
 }
 
 .social-media-area{
-    @apply flex justify-start pt-5 gap-4 socials
+    @apply flex justify-start gap-4 socials
 }
 
 .social-media{
@@ -71,27 +63,27 @@
 }
 
 .fb-icon{
-    @apply text-white bg-[#1c20f7] rounded-full leading-4 p-2 h-8 w-8
+    @apply text-slate-200 bg-[#1c20f7] rounded-full leading-4 p-2 h-8 w-8
 }
 
 .youtube-icon{
-    @apply  text-white bg-[#c63232] rounded-full leading-4 p-2 h-8 w-8
+    @apply  text-slate-200 bg-[#c63232] rounded-full leading-4 p-2 h-8 w-8
 }
 
 .whatsapp-icon{
-    @apply text-white bg-[#307f63] rounded-full leading-4 p-2 h-8 w-8
+    @apply text-slate-200 bg-[#307f63] rounded-full leading-4 p-2 h-8 w-8
 }
 
 .lower-footer{
-    @apply grid lg:grid-cols-2 grid-cols-1 pt-8 md:grid-cols-1 border-t border-orange-500
+    @apply grid lg:grid-cols-2 grid-cols-1 pt-4 md:grid-cols-1 border-t border-yellow-300
 }
 
 .lower-container{
-    @apply md:flex justify-between text-[#eb7835] text-xs md:text-base flex-col lg:flex-row 
+    @apply md:flex justify-between text-sky-100 text-xs md:text-base flex-col lg:flex-row 
 }
 
 .license{
-    @apply text-slate-400 lg:justify-end justify-start pt-4 flex md:justify-start md:pt-4 text-xs md:text-base lg:pt-0
+    @apply text-slate-200 lg:justify-end justify-start pt-4 flex md:justify-start md:pt-4 text-xs md:text-base lg:pt-0
 }
 
 .c-btn span:first-child {

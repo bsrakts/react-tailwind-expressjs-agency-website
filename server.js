@@ -273,7 +273,7 @@ app.get("/api/services", (req,res) => {
     res.send(servicesList)
 })
 
-app.get("/api/services/:id"), (req,res) =>{
+app.get("/api/services/:id", (req,res) =>{
     const servicesId = parseInt(req.params.id);
     const postService = servicesList.find((r) => r.id == servicesId);
     if(postService) {
@@ -281,8 +281,8 @@ app.get("/api/services/:id"), (req,res) =>{
     } else{
         res.status(404).send("Services Detail not found");
     }
-}
+})
 
 app.listen(5000, () => {
     console.log("Server is running on http://localhost:5000");
-});
+})

@@ -21,12 +21,12 @@ export const Pagination = ({ itemsPerPage, totalItems, currentPage, setCurrentPa
       <ul className="pagination flex justify-center">
         {pageNumbers.map((number) => (
           <li key={number} className="page-item mx-2">
-            <a
+            <div
               onClick={() => setCurrentPage(number)}
               className={currentPage === number ? 'active bg-blue-500 text-white px-4 py-2 rounded' : 'bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded'}
             >
               {number}
-            </a>
+            </div>
           </li>
         ))}
       </ul>

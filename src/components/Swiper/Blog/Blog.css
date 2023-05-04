@@ -1,56 +1,110 @@
 .blog{
-    @apply bg-transparent pt-14 lg:px-28 px-10 pb-10
+    @apply bg-white w-full py-8
 }
 
 .blog-header{
-    @apply text-center text-[#18181c] text-5xl font-bold mb-16
+    @apply text-center text-[#18181c] text-5xl font-bold mb-4
 }
 
 .blog-content{
-    @apply grid lg:grid-cols-2 grid-cols-1 lg:gap-4
+    @apply max-w-[1180px] max-h-fit m-auto relative;
 }
 
 .first-blog{
-    @apply lg:pt-0 xl:pt-0
+    @apply mx-8 bg-yellow-300 flex-row border border-black;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
 
 .first-blog-img{
-    @apply overflow-hidden w-4/5 rounded-2xl
+    @apply overflow-hidden w-full flex 
+}
+
+.first-blog-img img{
+    @apply max-w-[50%] border-2 border-white m-2;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .first-blog-tag{
     @apply text-[#18181c] pt-4 pb-7
 }
 
+.blog-swiper-content{
+    @apply py-4 w-3/4 m-auto
+}
+
+.blog-text-content{
+    @apply flex flex-col bg-transparent
+}
+
+.blog-swiper-content .swiper-slide{
+    background:transparent !important;
+}
+
+.first-blog-tag {
+    @apply p-2 flex justify-end
+}
+
 .first-blog-tag span{
-    @apply px-6 py-2 bg-orange-400 rounded-full font-thin text-white
+    @apply px-6 py-2 bg-white border border-black rounded-full font-thin text-[#181818]
 }
 
 .first-blog-title{
-    @apply text-[#18181c] font-semibold text-2xl
+    @apply text-[#18181c] font-semibold text-3xl flex tracking-wider;
+    font-family: var(--font-extreme);
 }
 
 .first-blog-text{
-    @apply pt-4 text-[#696984] w-4/5 mb-4
+    @apply pt-4 text-black mb-4 bg-transparent
+}
+
+.prev-next-button-blog{
+    @apply absolute flex w-3/4 -bottom-0 justify-between items-center
+}
+.swiper-button-next-button-blog ,
+.swiper-button-prev-button-blog {
+    @apply text-3xl
 }
 
 .read-more{
     @apply pb-1 text-[#272727] font-semibold md:mb-4 mb-4 border-b border-orange-500
 }
 
-.latest-blog{
-    @apply lg:flex md:flex-col md:items-center xl:flex-row
+.swiper-button-next-blog,.swiper-button-prev-blog {
+  @apply w-[60px] h-[60px] border border-[#181818] hover:text-yellow-300 bg-white hover:bg-[#181818] hover:shadow-lg shadow-zinc-800 rounded-full z-20  text-2xl cursor-pointer flex justify-center items-center;
+      background-image: none;
+  }
+
+.swiper-button-next-blog{
+    @apply ml-[-50px]
 }
 
-.latest-blog-content{
-    @apply lg:pl-5 flex-row justify-center
-}
+  .swiper-button-next-blog i,.swiper-button-prev-blog i {
+    @apply relative left-[50%] top-[50%] text-[#21272b];
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    transition: all .3s ease-in-out;
+  }
 
-.latest-blog-title{
-   @apply text-[#16161c] font-semibold text-xl
-}
-
-.latest-blog-text{
-    @apply text-[#696984] pt-3
-}
+  @keyframes arrowRight {
+    0% {
+      -webkit-transform: translate(0,-50%);
+      transform: translate(0,-50%);
+    }
+  
+    50% {
+      -webkit-transform: translate(-10px,-50%);
+      transform: translate(-10px,-50%);
+    }
+  
+    100% {
+      -webkit-transform: translate(0,-50%);
+      transform: translate(0,-50%);
+    }
+  }
+  
+  .swiper-button-next-blog:hover i,.swiper-button-prev-blog:hover i {
+    -webkit-animation: arrowRight 1s infinite;
+    animation: arrowRight 1s infinite;
+  }
 

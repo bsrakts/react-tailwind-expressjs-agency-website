@@ -1,18 +1,13 @@
-import React from "react";
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import SwiperCore, { Autoplay } from 'swiper';
-
+import React, { useState, useEffect } from "react";
+import SwiperCore, { EffectCoverflow, Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import './References.css'
 import 'swiper/css';
-import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import './References.css';
+import { BsArrowUp, BsArrowDown } from "react-icons/bs";
 
 export const References = () => {
 
-    SwiperCore.use([Autoplay]);
+    SwiperCore.use([EffectCoverflow, Navigation]);
 
     const references = [
         {
@@ -32,87 +27,102 @@ export const References = () => {
             "img": "https://picsum.photos/id/230/500/200",
         },
         {
-            "id": "4",
+            "id": "5",
             "img": "https://picsum.photos/id/2/500/200",
         },
         {
-            "id": "4",
+            "id": "6",
             "img": "https://picsum.photos/id/36/500/200",
         },
         {
-            "id": "4",
+            "id": "7",
+            "img": "https://picsum.photos/id/54/500/200",
+        },
+        {
+            "id": "8",
+            "img": "https://picsum.photos/id/54/500/200",
+        },
+        {
+            "id": "9",
+            "img": "https://picsum.photos/id/54/500/200",
+        },
+        {
+            "id": "10",
             "img": "https://picsum.photos/id/54/500/200",
         }
     ]
 
-    const reference = references.map((reference) => {
-        const { id, img } = reference;
-        return (
-            <SwiperSlide
-                style={{ borderRadius: 50 + "px" }}
+    const [start, setStart] = useState(0);
+    const [end, setEnd] = useState(5);
 
-            >
-                <a className="references-img">
-                    <img src={img} alt="" />
-                </a>
+    const handleClickNext = () => {
+        setStart(start + 5);
+        setEnd(end + 5);
+    };
+
+    const handleClickPrev = () => {
+        setStart(start - 5);
+        setEnd(end - 5);
+    };
+
+    const referenceGroups = [];
+    for (let i = 0; i < references.length; i += 4) {
+        referenceGroups.push(references.slice(i, i + 4));
+    }
+
+    const referenceSlides = referenceGroups.map((group, index) => {
+        return (
+            <SwiperSlide key={`group-${index}`}>
+                <div className="references-group">
+                    {group.map((reference) => (
+                        <div key={reference.id} className="references-img">
+                            <img src={reference.img} alt="" />
+                        </div>
+                    ))}
+                </div>
             </SwiperSlide>
-        )
-    })
+        );
+    });
 
     return (
         <div className="references">
-            <h1 className="references-header">References</h1>
-            <Swiper
-                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-                spaceBetween={50}
-                slidesPerView={5}
-                slidesPerGroup={3}
-                breakpoints={{
-                    0: {
-                        slidesPerView: 1,
-                    },
-                    400: {
-                        slidesPerView: 1,
-                    },
-                    639: {
-                        slidesPerView: 2,
-                    },
-                    865: {
-                        slidesPerView: 3,
-                    },
-                    1000: {
-                        slidesPerView: 4,
-                    },
-                    1500: {
-                        slidesPerView: 5,
-                    },
-                    1700: {
-                        slidesPerView: 6,
-                    }
+            <div className="references-content-mp">
+                <h1 className="references-header">Kimlerle Çalıştık?</h1>
+                <div className="references-bottom">
+                    <div className="references-content-m">
+                <Swiper 
+                    className="references-swiper"
+                    modules={[Navigation, Pagination, A11y, Autoplay, EffectCoverflow]}
+                    spaceBetween={10}
+                    slidesPerView={1}
+                    slidesPerGroup={1}
+                    direction={'vertical'}
+                    navigation={{
+                        prevEl: '.swiper-button-next-reference',
+                        nextEl: '.swiper-button-prev-reference',
+                    }}
+                    scrollbar={{ draggable: true }}
+                    speed={4000}
+                    loop={true}
+                    autoplay={{
+                      delay:4000,
+                      pauseOnMouseEnter: true,
+                      disableOnInteraction: false
                 }}
-                scrollbar={{ draggable: true }}
-                speed={1500}
-                direction={'horizontal'}
-                autoplay={{
-                    delay: 900,
-                    pauseOnMouseEnter: true,
-                    disableOnInteraction: false
-                }}
-                loop={true}
-                navigation={{
-                    prevEl: '.swiper-button-prev-reference',
-                    nextEl: '.swiper-button-next-reference',
-                }}
-                style={{ height: 200 + "px", marginBottom: 25 + 'px' }}
-            >
-                {reference}
-                <div className="swiper-button-next-reference">
-                    <BsArrowRight />
+                >
+                    {referenceSlides}
+                </Swiper>
                 </div>
-                <div className="swiper-button-prev-reference">
-                    <BsArrowLeft />
+                <div className="prev-next-button">
+                   <div className="swiper-button-next-reference" onClick={handleClickNext}>
+                        <BsArrowUp />
+                    </div>
+                    <div className="swiper-button-prev-reference" onClick={handleClickPrev}>
+                        <BsArrowDown />
+                    </div>
                 </div>
-            </Swiper>
+            </div>
+            </div>
         </div>
     )
 }

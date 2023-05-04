@@ -1,0 +1,74 @@
+.project-question{
+  @apply bg-[#18181c]
+}
+
+.projectquestion-content{
+  @apply max-w-[1170px] m-auto py-16
+}
+
+.project-motto{
+   @apply text-9xl font-semibold leading-relaxed text-yellow-400 pb-8;
+   -webkit-text-stroke: 2px black;
+   text-shadow: 2.5px 1.5px 0px rgba(255, 255, 255, 1); 
+}
+
+.pq-text-p{
+  @apply text-2xl text-white tracking-widest
+}
+
+.pq-contact-button{
+  @apply flex my-8
+}
+
+.pg-button-icon{
+  @apply flex items-center w-40 text-white text-base mr-16 px-8 py-2 shadow-md shadow-[rgba(255,255,255,0.3)] hover:shadow-lg hover:shadow-[rgba(255,255,255,0.3)] 
+}
+
+.pg-button-icon:first-child{
+  @apply border border-green-500 hover:shadow-lg hover:shadow-[rgba(34,197,94,0.3)] 
+}
+
+.pg-button-icon:last-child{
+  @apply border border-blue-500 pl-10 hover:shadow-lg hover:shadow-[rgba(59,130,246,0.3)] 
+}
+
+.pg-button-icon span{
+  @apply mr-2
+}
+
+.ReactModal__Overlay--after-open{
+  z-index:9999 !important;
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.ReactModal__Content--after-open{
+  background: #181818 !important;
+  color: white;
+  border:2px solid #facc15 !important;
+}
+
+.modal-content > .form-group {
+  @apply flex flex-col mb-2
+}
+
+.modal-content > .form-group > label {
+  @apply flex items-center mb-2
+}
+
+
+.modal-content > .form-group > input , 
+.modal-content > .form-group > textarea {
+  @apply text-[#181818] bg-white border-b border-x-0 border-t-0 border-yellow-300 
+}
+
+.model-header-text{
+  @apply text-2xl pb-1 mb-2 border-b border-yellow-300
+}
+
+.modal-header{
+  @apply flex justify-between
+}
+
+.pg-submit-btn{
+  @apply bg-yellow-300 text-[#181818] rounded shadow px-4 py-2;
+}
