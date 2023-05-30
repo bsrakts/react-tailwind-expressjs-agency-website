@@ -15,6 +15,8 @@ export const fetchProjectDetail = async () => {
   return projectData;
 }
 
+
+
 //fetch services
 export const fetchServices = async () => {
   const responseService = await axios.get('http://localhost:5000/api/services');
